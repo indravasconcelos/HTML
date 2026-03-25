@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Poupi - Principal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- TELA PRINCIPAL -->
+  <div class="tela-principal">
+    <div class="container-principal">
+      
+      <!-- Lado Esquerdo -->
+      <div class="lado-esquerdo">
+        
+        <!-- Saudação -->
+        <h2 class="saudacao" id="saudacao"></h2>
+
+        <!-- Card Info Principal -->
+        <div class="card-info">
+          <h3 id="nomeObjetivo"></h3>
+          
+          <!-- Mensagem de quanto precisa guardar por mês -->
+          <div class="mensagem-guardar" id="mensagemGuardar">
+            <!-- Mensagem será inserida via JavaScript -->
+          </div>
+          
+          <div class="info-item">
+            <span class="info-label">Meta total:</span>
+            <span class="info-valor">R$ <span id="metaTotal"></span></span>
+          </div>
+          
+          <div class="info-item">
+            <span class="info-label" id="labelEconomizado">Economizado:</span>
+            <span class="info-valor">R$ <span id="valorEconomizado">0.00</span></span>
+          </div>
+          
+          <div class="info-item">
+            <span class="info-label">Quanto falta:</span>
+            <span class="info-valor">R$ <span id="valorFalta"></span></span>
+          </div>
+
+          <!-- Barra de progresso -->
+          <div class="progress-container">
+            <div class="progress-bar">
+              <div class="progress" id="barraProgresso"></div>
+            </div>
+            <div class="percentual" id="percentual">0%</div>
+          </div>
+
+          <!-- Feedback Inteligente -->
+          <div class="feedback" id="feedback"></div>
+        </div>
+
+        <!-- Gráfico -->
+        <div class="card-info">
+          <h3>Progresso</h3>
+          <div class="grafico-container">
+            <canvas id="graficoMeta"></canvas>
+          </div>
+        </div>
+
+        <!-- Botões principais -->
+        <div class="botoes-principais">
+          <button class="btn btn-primary" id="btnAdicionar">
+            Registrar Economia
+          </button>
+          
+          <button class="btn btn-secondary" id="btnResetar">
+            Criar nova meta
+          </button>
+        </div>
+      </div>
+
+      <!-- Lado Direito - Dicas -->
+      <div class="lado-direito">
+        <div class="card-dica">
+          <h3>💡 Dica para manter o foco</h3>
+          <p id="textoDica">Carregando dica...</p>
+          <button class="btn btn-secondary" id="btnNovaDica">
+            Nova dica
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- CARD FLUTUANTE - REGISTRAR ECONOMIA -->
+  <div class="card-flutuante" id="cardEconomia">
+    <div class="card-conteudo">
+      <h3>Registrar Economia</h3>
+      
+      <form id="formEconomia">
+        <div class="input-group">
+          <label for="valorEconomia">Quanto você economizou hoje?</label>
+          <input type="number" id="valorEconomia" placeholder="Digite o valor" required>
+        </div>
+
+        <div class="botoes-card">
+          <button type="button" class="btn fechar-card" id="fecharCardEconomia">
+            Cancelar
+          </button>
+          <button type="submit" class="btn btn-primary">
+            Confirmar
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- MENSAGEM DE PARABÉNS -->
+  <div class="mensagem-parabens" id="mensagemParabens">
+    <div class="conteudo-parabens">
+      <h2>🎉 Parabéns!</h2>
+      <p>Você conseguiu! Agora é só realizar o seu sonho!</p>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="principal.js"></script>
+</body>
+</html>
+
