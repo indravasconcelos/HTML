@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<!-- saved from url=(0026)https://poupi.netlify.app/ -->
+<html lang="pt-BR"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Poupi - Seu dinheiro no controle</title>
+  <link rel="stylesheet" href="./preview_files/style.css">
+</head>
+
+<body>
+
+  <!-- TELA INICIAL -->
+  <div class="tela-inicio">
+    <div class="container-inicio">
+      
+      <!-- Header -->
+      <header class="header">
+      </header>
+
+      <!-- Mensagem de Boas Vindas -->
+      <div class="mensagem-motivacional">
+        "Bem-vindo ao Poupi! Aqui você pode definir suas metas de economia e acompanhar seu progresso para alcançar seus objetivos financeiros."
+      </div>
+
+      <!-- Formulário -->
+      <div class="form-card">
+        <h2>Defina sua Meta</h2>
+        
+        <form id="metaForm">
+          <div class="input-group">
+            <label for="nome">Qual é o seu nome?</label>
+            <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required="">
+          </div>
+
+          <div class="input-group">
+            <label for="objetivo">Qual é o seu objetivo?</label>
+            <input type="text" id="objetivo" name="objetivo" placeholder="Ex: Viagem, Carro, Casa" required="">
+          </div>
+
+          <div class="input-group">
+            <label for="metaTotal">Meta total (R$)</label>
+            <input type="number" id="metaTotal" name="metaTotal" placeholder="Quanto você quer alcançar?" required="">
+          </div>
+
+          <div class="input-group">
+            <label for="valorMensal">Quanto deseja guardar por mês?</label>
+            <input type="number" id="valorMensal" name="valorMensal" placeholder="Quanto deseja guardar por mês?">
+          </div>
+
+          <div class="botoes-inicio">
+            <button type="submit" class="btn btn-primary">
+              Começar Meta
+            </button>
+            
+            <button type="button" class="btn btn-secondary" id="btnCalcular">
+              Quanto eu economizo no mês?
+            </button>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- CARD FLUTUANTE - CALCULAR -->
+  <div class="card-flutuante" id="cardCalcular">
+    <div class="card-conteudo">
+      <h3>Calcular Valor Mensal</h3>
+      
+      <form id="formCalcular">
+        <div class="input-group">
+          <label for="metaTotalCalc">Meta Total (R$)</label>
+          <input type="number" id="metaTotalCalc" placeholder="Quanto você quer alcançar?" required="">
+        </div>
+
+        <div class="input-group">
+          <label for="prazoMeses">Prazo (meses)</label>
+          <input type="number" id="prazoMeses" placeholder="Em quantos meses?" required="">
+        </div>
+
+        <div class="botoes-card">
+          <button type="button" class="btn fechar-card" id="fecharCardCalcular">
+            Cancelar
+          </button>
+          <button type="submit" class="btn btn-primary">
+            Calcular
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="./preview_files/inicio.js.download"></script>
+
+
+
+</body></html>
