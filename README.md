@@ -8,7 +8,7 @@ Aplicação front-end para organização financeira, com foco em uma interface m
 - JavaScript
 
 ## 📸 Preview
-![preview](preview.png)
+![preview](poupi/preview.png)
 
 ## 🔗 Acesse o projeto
 https://poupi.netlify.app
